@@ -1,0 +1,24 @@
+#content {
+    flex-direction: column !important;
+    padding: 0 10px;
+}
+article > h1 {
+    display: flex;
+    align-items: center;
+    pointer-events: all !important;
+}
+article > h1::before {
+    display: inline-block;
+    font-family: 'Material Icons';
+    content: '\e5cf';
+}
+article > .view {
+    height: 0;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+.view {
+    height: 0;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
