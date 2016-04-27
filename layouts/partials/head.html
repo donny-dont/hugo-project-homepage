@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{{ with .Site.LanguageCode }}<html lang='{{ . }}'>{{ else }}<html>{{ end }}
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ partial "meta.html" . }}
+
+  <base href='{{ .Site.BaseURL }}'>
+  <title> {{ .Title }}</title>
+  <link rel='canonical' href='{{ .Permalink }}'>
+  {{ if .RSSlink }}<link href='{{ .RSSlink }}' rel='alternate' type='application/rss+xml' title='{{ .Title }}' />{{ end }}
+
+  {{ partial "head_includes.html" . }}
+
+  <link rel='stylesheet' type='text/css' media='only screen and (max-device-width: 480px)' href='{{ .Site.BaseURL }}css/documentation_mobile.{{ .Site.Params.skin }}.min.css'>
+  <link rel='stylesheet' type='text/css' href='{{ .Site.BaseURL }}css/documentation.{{ .Site.Params.skin }}.min.css'>
+
+  {{ if .Params.highlight_code }}
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/highlight.min.css" />
+  <script src="{{ .Site.BaseURL }}js/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  {{ end }}
+</head>
+{{ with .Site.LanguageCode }}<body lang='{{ . }}'>{{ else }}<body>{{ end }}
