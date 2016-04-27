@@ -1,0 +1,14 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+<section id="content">
+  <nav id="submenu">
+    <div>Overview</div>
+    <div>Remote Drivers</div>
+  </nav>
+  <article class="hide">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </article>
+</section>
+{{ partial "footer.html" . }}
+{{ partial "tail.html" . }}
