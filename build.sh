@@ -1,6 +1,9 @@
 #!/bin/sh
 set -ex
 
+# Get Dart version
+dart --version
+
 # Build the dart project
 # pub build
 
@@ -15,3 +18,6 @@ curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.
 tar -xJf "node-v$NODE_VERSION-linux-x64.tar.xz" -C /usr/local --strip-components=1
 rm "node-v$NODE_VERSION-linux-x64.tar.xz"
   
+# Get Node version
+node --version
+npm --version
