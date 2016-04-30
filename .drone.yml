@@ -1,0 +1,8 @@
+build:
+  image: google/dart:$$DART_VERSION
+  pull: true
+  commands:
+    - sh build.sh
+matrix:
+  DART_VERSION:
+    - latest
