@@ -5,7 +5,7 @@ set -ex
 dart --version
 
 # Build the dart project
-# pub build
+pub build
 
 # Clone the master branch into a new directory
 git clone https://github.com/donny-dont/hugo-project-homepage.git master
