@@ -1,0 +1,17 @@
+name: project_homepage
+version: 0.1.0
+author: Don Olmstead <don.j.olmstead@gmail.com>
+environment:
+  sdk: '>=1.12.0 <2.0.0'
+description: Project homepage.
+dev_dependencies:
+  browser: ^0.10.0+2
+  less_dart: ^0.3.3
+  dart_to_js_script_rewriter: ^1.0.1
+transformers:
+- less_dart:
+    entry_points:
+      - lib/documentation.null.less
+      - lib/documentation_mobile.null.less
+    include_path: lib
+- dart_to_js_script_rewriter
