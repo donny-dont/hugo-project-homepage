@@ -1,0 +1,81 @@
+// Copyright (c) 2016, the Hugo Project Homepage Authors.
+// Please see the AUTHORS file for details.
+// This program is free software. It comes without any warranty, to
+// the extent permitted by applicable law. You can redistribute it
+// and/or modify it under the terms of the Do What The Fuck You Want
+// To Public License, Version 2, as published by Sam Hocevar. See
+// http://www.wtfpl.net/ for more details.
+
+// The null version of the styling contains no styling.
+//
+// It is useful if you wanted to start rolling your own skin as all the values
+// are present and can be moved over.
+//
+// See the section in the README.md for how to roll your own skin.
+
+//---------------------------------------------------------------------
+// Fonts
+//---------------------------------------------------------------------
+
+@default-font: Arial, Helvetica, sans-serif;
+@header-font: @default-font;
+@code-font: 'Courier New', 'Lucida Console', monospace;
+@icon-font: @default-font;
+
+// If external fonts are being used they should be included here
+
+//---------------------------------------------------------------------
+// Expand
+//---------------------------------------------------------------------
+
+// The content to use in the pseudo selector to show the area can be expanded.
+@expand-content: '+';
+// The content to use in the psuedo selector to show the area can be contracted.
+@contract-content: '-';
+
+// Mixin for the view element.
+//
+// This is a good place for setting a transition if desired. The height of the
+// view element will be modified in script and can be animated if desired.
+.view-mixin() {}
+
+//---------------------------------------------------------------------
+// Article
+//---------------------------------------------------------------------
+
+// Mixin for the main area.
+.main-mixin() {}
+
+// Mixin for the main area on mobile.
+.main-mobile-mixin() {}
+
+// Mixin for the article area.
+.article-mixin() {}
+
+// Mixin for the hidden article area.
+//
+// Useful if the article is to be transitioned into view.
+.article-hide-mixin() {}
+
+// Mixin for the article header.
+.article-header-mixin() {}
+
+//---------------------------------------------------------------------
+// Header (Site Header)
+//---------------------------------------------------------------------
+
+// The dimensions of the logo
+@logo-width: 32;
+@logo-height: 32;
+
+// Mixin for the header area
+.header-mixin() {}
+
+// Mixin for the header navigation area
+.header-nav-mixin() {}
+
+// Mixin for individual header navigation
+.header-nav-div-mixin() {}
+
+// Mixin for the currently selected header navigation
+.header-nav-div-selected-mixin() {}
