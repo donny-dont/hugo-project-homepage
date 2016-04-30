@@ -5,6 +5,7 @@ set -ex
 dart --version
 
 # Build the dart project
+pub get
 pub build
 
 # Clone the master branch into a new directory
