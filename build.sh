@@ -31,6 +31,9 @@ grunt deploy --target=$MASTER_BRANCH
 
 # See if the repo has changed
 cd $MASTER_BRANCH
+if [ -n "$(git status --porcelain)" ]; then
+  echo "there are changes";
   git status
 else
+  echo "no changes";
 fi
