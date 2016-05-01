@@ -7,14 +7,17 @@
 // http://www.wtfpl.net/ for more details.
 
 module.exports = function(grunt) {
+  var dest = grunt.option('target') || 'master';
+
   grunt.initConfig({
     // Config
     globalConfig: {
       src: 'build/web',
-      dest: 'master/static'
+      dest: dest + '/static',
+      cssSrc: '<%= globalConfig.src %>/packages/project_homepage'
     },
 
-    // Copy Compiled dart files
+    // Copy compiled files
     copy: {
       main: {
         files: [
@@ -23,6 +26,12 @@ module.exports = function(grunt) {
             cwd: '<%= globalConfig.src %>',
             src: ['*.dart.js'],
             dest: '<%= globalConfig.dest %>/js'
+          },
+          {
+            expand: true,
+            cwd: '<%= globalConfig.cssSrc %>',
+            src: ['*.min.css'],
+            dest: '<%= globalConfig.dest %>/css'
           }
         ]
       }
@@ -33,9 +42,9 @@ module.exports = function(grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: '<%= globalConfig.src %>/packages/project_homepage',
-          src: ['*.css'],
-          dest: '<%= globalConfig.dest %>/css',
+          cwd: '<%= globalConfig.cssSrc %>',
+          src: ['*.css', '!*.min.css'],
+          dest: '<%= globalConfig.cssSrc %>',
           rename: function(dest, src) {
             return dest + '/' + src.substring(0, src.indexOf('.css')) + '.min.css';
           }
@@ -47,5 +56,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('default', ['copy', 'cssmin']);
+  grunt.registerTask('default', ['cssmin']);
+  grunt.registerTask('deploy', ['copy']);
 };
