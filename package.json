@@ -1,0 +1,20 @@
+{
+  "name": "hugo-project-homepage",
+  "version": "1.0.0",
+  "description": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donny-dont/hugo-project-homepage.git"
+  },
+  "author": "Don Olmstead <don.j.olmstead@gmail.com>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/donny-dont/hugo-project-homepage/issues"
+  },
+  "homepage": "https://github.com/donny-dont/hugo-project-homepage#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1"
+  }
+}
