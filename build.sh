@@ -34,6 +34,6 @@ cd $MASTER_BRANCH
 if [ -n "$(git status --porcelain)" ]; then
   echo "there are changes";
   git status
-else
-  echo "no changes";
+  git commit -a -m "[ci skip] Updating generated files"
+  git push
 fi
