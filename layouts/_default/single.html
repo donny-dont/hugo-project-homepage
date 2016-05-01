@@ -1,14 +1,18 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
-<section id="content">
+<main>
   <nav id="submenu">
     <div>Overview</div>
     <div>Remote Drivers</div>
   </nav>
   <article class="hide">
-    <h1>{{ .Title }}</h1>
+    <header>{{ .Title }}</header>
+    <aside id="toc">
+      <h2>{{ .Site.Params.toc_header }}</h2>
+      {{ .TableOfContents }}
+    </aside>
     {{ .Content }}
   </article>
-</section>
+</main>
 {{ partial "footer.html" . }}
 {{ partial "tail.html" . }}
