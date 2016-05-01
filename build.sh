@@ -33,6 +33,7 @@ grunt deploy --target=$MASTER_BRANCH
 cd $MASTER_BRANCH
 if git status --porcelain; then
   echo "Changes!"
+  git status
 else
   echo "No changes"
 fi
