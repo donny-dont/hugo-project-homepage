@@ -9,7 +9,8 @@ pub get
 pub build
 
 # Clone the master branch into a new directory
-git clone https://github.com/donny-dont/hugo-project-homepage.git master
+MASTER_BRANCH=master
+git clone https://github.com/donny-dont/hugo-project-homepage.git $MASTER_BRANCH
 
 # Install node for processing tools
 NPM_CONFIG_LOGLEVEL=info
@@ -21,4 +22,16 @@ rm "node-v$NODE_VERSION-linux-x64.tar.xz"
   
 # Get Node version
 node --version
-npm --version
+
+# Build the files
+npm install -g grunt-cli
+npm install
+grunt
+
+# See if the repo has changed
+cd $MASTER_BRANCH
+if [[ `git status --porcelain` ]]; then
+  echo "Changes!"
+else
+  echo "No changes"
+fi
