@@ -27,6 +27,7 @@ node --version
 npm install -g grunt-cli
 npm install
 grunt
+grunt deploy --target=$MASTER_BRANCH
 
 # See if the repo has changed
 cd $MASTER_BRANCH
