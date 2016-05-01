@@ -8,10 +8,6 @@ dart --version
 pub get
 pub build
 
-# Clone the master branch into a new directory
-MASTER_BRANCH=master
-git clone https://github.com/donny-dont/hugo-project-homepage.git $MASTER_BRANCH
-
 # Install node for processing tools
 NPM_CONFIG_LOGLEVEL=info
 NODE_VERSION=6.0.0
@@ -27,13 +23,19 @@ node --version
 npm install -g grunt-cli
 npm install
 grunt
+
+# Clone the master branch into a new directory
+MASTER_BRANCH=master
+git clone https://github.com/donny-dont/hugo-project-homepage.git $MASTER_BRANCH
+
+# Write files to repo
 grunt deploy --target=$MASTER_BRANCH
 
 # See if the repo has changed
 cd $MASTER_BRANCH
 if [ -n "$(git status --porcelain)" ]; then
-  echo "there are changes";
   git status
+
   git commit -a -m "[ci skip] Updating generated files"
   git push
 fi
