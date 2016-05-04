@@ -1,0 +1,33 @@
+//---------------------------------------------------------------------
+// Fonts
+//---------------------------------------------------------------------
+
+@default-font: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+@header-font: @default-font;
+@code-font: Menlo, Monaco, Consolas, 'Courier New', monospace;
+@icon-font: 'Material Icons';
+
+//---------------------------------------------------------------------
+// Expander/Accordion
+//---------------------------------------------------------------------
+
+@expander-transition-time: 1s;
+@expander-transition-easing: ease-in-out;
+
+//---------------------------------------------------------------------
+// Article
+//---------------------------------------------------------------------
+
+@expand-content: '\e5cf';
+@contract-content: '\e5ce';
+
+.article-mixin() {
+  transition: all 1s ease-in-out;
+}
+.article-hide-mixin() {
+  transform: translateX(rem(40));
+  opacity: 0;
+}
+
+// Header
+.article-header-mixin() {}
