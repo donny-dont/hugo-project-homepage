@@ -31,7 +31,7 @@
 
 // The content to use in the pseudo selector to show the area can be expanded.
 @expand-content: '+';
-// The content to use in the psuedo selector to show the area can be contracted.
+// The content to use in the pseudo selector to show the area can be contracted.
 @contract-content: '-';
 
 // Mixin for the view element.
@@ -53,6 +53,9 @@
 // Mixin for the article area.
 .article-mixin() {}
 
+// Mixin for the article on mobile.
+.article-mobile-mixin() {}
+
 // Mixin for the hidden article area.
 //
 // Useful if the article is to be transitioned into view.
@@ -61,22 +64,35 @@
 // Mixin for the article header.
 .article-header-mixin() {}
 
+// Mixin for the table of contents.
+.toc-mixin() {}
+
+// Mixin for the ul within the table of contents.
+.toc-ul-mixin() {}
+
 //---------------------------------------------------------------------
 // Header (Site Header)
 //---------------------------------------------------------------------
 
-// The dimensions of the logo
+// The dimensions of the logo.
 @logo-width: 32;
 @logo-height: 32;
 
-// Mixin for the header area
+// Mixin for the header area.
 .header-mixin() {}
 
-// Mixin for the header navigation area
+// Mixin for the header navigation area.
 .header-nav-mixin() {}
 
-// Mixin for individual header navigation
+// Mixin for individual header navigation.
 .header-nav-div-mixin() {}
 
-// Mixin for the currently selected header navigation
+// Mixin for the currently selected header navigation.
 .header-nav-div-selected-mixin() {}
+
+//---------------------------------------------------------------------
+// Footer (Site Footer)
+//---------------------------------------------------------------------
+
+// Mixin for the footer area
+.footer-mixin() {}
