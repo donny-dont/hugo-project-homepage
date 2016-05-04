@@ -18,6 +18,8 @@ main {
 }
 
 article {
+  .article-mobile-mixin;
+
   > h1 {
     display: flex;
     align-items: center;
@@ -34,5 +36,10 @@ article {
     &.expanded::before {
       content: @contract-content;
     }
+  }
+
+  > #toc {
+    // Hide on mobile
+    display: none;
   }
 }
