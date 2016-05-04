@@ -6,7 +6,7 @@ environment:
 description: Project homepage.
 dev_dependencies:
   browser: ^0.10.0+2
-  less_dart: ^0.3.3
+  less_dart: ^0.3.4
   dart_to_js_script_rewriter: ^1.0.1
 transformers:
 - less_dart:
