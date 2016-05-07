@@ -1,12 +1,8 @@
 pipeline:
   build:
-    image: google/dart:$$DART_VERSION
+    image: google/dart
     pull: true
     commands:
       - sh build.sh
     when:
       branch: site-develop
-
-matrix:
-  DART_VERSION:
-    - latest
