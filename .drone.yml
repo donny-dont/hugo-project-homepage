@@ -1,10 +1,12 @@
-build:
-  image: google/dart:$$DART_VERSION
-  pull: true
-  commands:
-    - sh build.sh
-  when:
-    branch: site-develop
+pipeline:
+  build:
+    image: google/dart:$$DART_VERSION
+    pull: true
+    commands:
+      - sh build.sh
+    when:
+      branch: site-develop
+
 matrix:
   DART_VERSION:
     - latest
