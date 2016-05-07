@@ -1,1 +1,1 @@
-main{flex-direction:column!important}article>h1{display:flex;align-items:center;pointer-events:all!important}article>h1::before{display:inline-block;font-family:Arial,Helvetica,sans-serif;content:'+'}article>h1.expanded::before{content:'-'}
+main{flex-direction:column!important}article>h1{display:flex;align-items:center;pointer-events:all!important}article>h1::before{display:inline-block;font-family:Arial,Helvetica,sans-serif;content:'+'}article>h1.expanded::before{content:'-'}article>#toc{display:none}
