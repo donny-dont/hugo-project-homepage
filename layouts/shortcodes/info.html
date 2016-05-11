@@ -1,4 +1,4 @@
 <aside class="info">
-  <span>Info</span>
+  <span>{{ if .Get "label" }}{{ .Get "label" }}{{ else }}Info{{ end }}</span>
   {{ .Inner }}
 </aside>
