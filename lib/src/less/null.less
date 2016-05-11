@@ -21,7 +21,7 @@
 @header-font: @default-font;
 @code-font: 'Courier New', 'Lucida Console', monospace;
 @icon-font: @default-font;
-@base-font-size: 16px;
+@base-font-size: 16;
 
 // If external fonts are being used they should be included here
 
@@ -85,7 +85,9 @@
 @logo-height: 32;
 
 // Mixin for the header area.
-.header-mixin() {}
+.header-mixin() {
+  border-bottom: rem(1) solid gray;
+}
 
 // Mixin for the header navigation area.
 .header-nav-mixin() {}
@@ -95,6 +97,30 @@
 
 // Mixin for the currently selected header navigation.
 .header-nav-div-selected-mixin() {}
+
+//---------------------------------------------------------------------
+// Asides
+//---------------------------------------------------------------------
+
+// Mixin for an information aside.
+.aside-info-mixin() {
+  border-left: rem(3) solid blue;
+}
+
+// Mixin for the name of an information aside.
+.aside-info-name-mixin() {
+  font-weight: bold;
+}
+
+// Mixin for a warning aside.
+.aside-warning-mixin() {
+  border-left: rem(3) solid red;
+}
+
+// Mixin for a warning aside.
+.aside-warning-name-mixin() {
+  font-weight: bold;
+}
 
 //---------------------------------------------------------------------
 // Figures
@@ -117,4 +143,6 @@
 //---------------------------------------------------------------------
 
 // Mixin for the footer area
-.footer-mixin() {}
+.footer-mixin() {
+  border-top: rem(1) solid gray;
+}
