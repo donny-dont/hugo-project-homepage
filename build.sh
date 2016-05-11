@@ -24,6 +24,10 @@ npm install -g grunt-cli
 npm install
 grunt
 
+# Get the current committer
+COMMITTER_NAME=$(git --no-pager show -s --format='%an')
+COMMITTER_EMAIL=$(git --no-pager show -s --format='%ae')
+
 # Clone the master branch into a new directory
 MASTER_BRANCH=master
 git clone https://github.com/donny-dont/hugo-project-homepage.git $MASTER_BRANCH
@@ -35,6 +39,9 @@ grunt deploy --target=$MASTER_BRANCH
 cd $MASTER_BRANCH
 if [ -n "$(git status --porcelain)" ]; then
   git status
+
+  git config --global user.name "$COMMITTER_NAME"
+  git config --global user.email "$COMMITTER_EMAIL"
 
   git commit -a -m "[ci skip] Updating generated files"
   git push
