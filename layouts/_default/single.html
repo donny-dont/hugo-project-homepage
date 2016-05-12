@@ -1,10 +1,7 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 <main>
-  <nav id="submenu">
-    <div>Overview</div>
-    <div>Remote Drivers</div>
-  </nav>
+  {{ partial "side_menu.html . }}
   <article class="hide">
     <header>{{ .Title }}</header>
     <aside id="toc">
